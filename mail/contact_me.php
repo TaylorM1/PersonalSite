@@ -1,6 +1,6 @@
 <?php
 require_once('phpmailer/class.phpmailer.php');
-define('GUSER', 'taylor.miles42@gmail.com'); // GMail username
+define('GUSER', 'taylormsite@gmail.com'); // GMail username
 define('GPWD', 'awesomeasurazojja'); // GMail password
 function smtpmailer($to, $from, $from_name, $subject, $body) { 
 	global $error;
