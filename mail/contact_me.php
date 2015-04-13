@@ -1,7 +1,7 @@
 <?php
 require_once('phpmailer/class.phpmailer.php');
 define('GUSER', 'taylor.miles42@gmail.com'); // GMail username
-define('GPWD', 'blockland12'); // GMail password
+define('GPWD', 'awesomeasurazojja'); // GMail password
 function smtpmailer($to, $from, $from_name, $subject, $body) { 
 	global $error;
 	$mail = new PHPMailer();  // create a new object
@@ -46,8 +46,7 @@ $to = 'taylor.miles42@gmail.com'; // Add your email address inbetween the '' rep
 $email_subject = "Website Contact Form:  $name";
 $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
 $headers = "From: noreply@herokuapp.com"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";	
-mail($to,$email_subject,$email_body,$headers);
+$headers .= "Reply-To: $email_address";
 smtpmailer($to, $email_address, $name, $email_subject, $email_body);
 return true;			
 ?>
